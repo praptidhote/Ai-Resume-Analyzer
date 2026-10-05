@@ -10,11 +10,9 @@ const errorHandler = require("./middleware/errorHandler");
 
 const app = express();
 
-const clientOrigin = process.env.CLIENT_URL || "http://localhost:3000";
-
 app.use(
   cors({
-    origin: clientOrigin,
+    origin: true,
     credentials: true,
   })
 );
