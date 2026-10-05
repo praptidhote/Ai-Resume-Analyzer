@@ -6,6 +6,7 @@ An intelligent, full-stack ATS (Applicant Tracking System) resume analyzer and s
 ![Node.js](https://img.shields.io/badge/Node.js-20+-green?style=flat&logo=node.js)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Mongoose-brightgreen?style=flat&logo=mongodb)
 ![Google Gemini](https://img.shields.io/badge/AI-Google%20Gemini-blue?style=flat&logo=google)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-success?style=flat&logo=vercel)](https://ai-resume-analyzer-eosin-delta.vercel.app)
 
 ---
 
