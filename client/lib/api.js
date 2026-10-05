@@ -1,5 +1,12 @@
-const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000/api";
+function getBaseUrl() {
+  if (process.env.NEXT_PUBLIC_API_URL) {
+    return process.env.NEXT_PUBLIC_API_URL;
+  }
+  if (typeof window !== "undefined" && window.location.hostname !== "localhost") {
+    return "https://ai-resume-analyzer-55m7.onrender.com/api";
+  }
+  return "http://localhost:5000/api";
+}
 
 class ApiError extends Error {
   constructor(message, status, data) {
@@ -10,7 +17,7 @@ class ApiError extends Error {
 }
 
 async function request(endpoint, options = {}) {
-  const url = `${API_BASE_URL}${endpoint}`;
+  const url = `${getBaseUrl()}${endpoint}`;
   const headers = {
     ...options.headers,
   };
@@ -83,5 +90,5 @@ export const api = {
       method: "POST",
       body: JSON.stringify(body),
     }),
-  downloadReportUrl: (id) => `${API_BASE_URL}/analysis/${id}/report`,
+  downloadReportUrl: (id) => `${getBaseUrl()}/analysis/${id}/report`,
 };
