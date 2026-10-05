@@ -10,6 +10,27 @@ An intelligent, full-stack ATS (Applicant Tracking System) resume analyzer and s
 
 ---
 
+## 📸 Screenshots
+
+### 🏠 Landing Page
+![Landing Page](assets/screenshots/01-landing-page.png)
+
+### 🔐 Authentication
+| Login | Register |
+|---|---|
+| ![Login Page](assets/screenshots/02-login-page.png) | ![Register Page](assets/screenshots/03-register-page.png) |
+
+### 📄 Resume Upload & Analysis
+![Analyze Page](assets/screenshots/04-analyze-authenticated.png)
+
+### 📊 ATS Score Results
+![Analysis Results](assets/screenshots/05-analysis-results.png)
+
+### 📈 Score History Dashboard
+![Dashboard](assets/screenshots/06-dashboard-populated.png)
+
+---
+
 ## 🚀 Key Features
 
 - **Hybrid ATS Scoring Algorithm**: Rather than relying on an opaque, single AI prompt, scores are calculated using a transparent 4-pillar weighted model combining deterministic TF-IDF NLP with semantic LLM evaluation.
