@@ -1,6 +1,8 @@
 function getBaseUrl() {
-  if (process.env.NEXT_PUBLIC_API_URL) {
-    return process.env.NEXT_PUBLIC_API_URL;
+  const envUrl = process.env.NEXT_PUBLIC_API_URL;
+  // Ensure we use the exact live Render URL with the 55m7 slug
+  if (envUrl && !envUrl.includes("ai-resume-analyzer-api.onrender.com") && envUrl !== "http://localhost:5000/api") {
+    return envUrl;
   }
   if (typeof window !== "undefined" && window.location.hostname !== "localhost") {
     return "https://ai-resume-analyzer-55m7.onrender.com/api";
